@@ -5,7 +5,7 @@ function calculateBMI(weight, height) {
 
 // BMI
 function calculateAndDisplayBMI() {
-    const weight = parseFloat(document.getElementById("weight").value); // Hmotnost (kg)
+    let weight = parseFloat(document.getElementById("weight").value); // Hmotnost (kg)
     let height = parseFloat(document.getElementById("height").value); // výška (cm)
 
 
@@ -18,7 +18,7 @@ function calculateAndDisplayBMI() {
         return;
     }
 
-    const bmi = calculateBMI(weight, height); // výpočet BMI
+    let bmi = calculateBMI(weight, height); // výpočet BMI
     let category = "";
 
     if (bmi < 18.5) {
@@ -50,11 +50,11 @@ function calculateBMR(weight, height, age, gender, activityLevel) {
 
 // BMR
 function calculateAndDisplayBMR() {
-    const weight = parseFloat(document.getElementById("weight").value); // Hmotnost (kg)
+    let weight = parseFloat(document.getElementById("weight").value); // Hmotnost (kg)
     let height = parseFloat(document.getElementById("height").value); // výška (cm)
-    const age = parseInt(document.getElementById("age").value); // věk
-    const gender = document.getElementById("gender").value; // pohlaví
-    const activityLevel = parseFloat(document.getElementById("activityLevel").value); // Aktivita
+    let age = parseInt(document.getElementById("age").value); // věk
+    let gender = document.getElementById("gender").value; // pohlaví
+    let activityLevel = parseFloat(document.getElementById("activityLevel").value); // Aktivita
 
     if (height > 10) {
         height /= 100; // převod z cm na m
@@ -65,6 +65,6 @@ function calculateAndDisplayBMR() {
         return;
     }
 
-    const bmr = calculateBMR(weight, height, age, gender, activityLevel); // Výpočet BMR
+    let bmr = calculateBMR(weight, height, age, gender, activityLevel); // Výpočet BMR
     document.getElementById("bmrResult").textContent = `Doporučený denní příjem kalorií je ${bmr.toFixed(2)} kcal.`;
 }
